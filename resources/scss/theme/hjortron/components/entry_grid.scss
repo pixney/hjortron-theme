@@ -1,0 +1,48 @@
+.entry_grid
+{
+    .control-label
+    {
+        margin: 0;
+    }
+
+    .form-group.entry_grid-field.grid-field_type > .control-label
+    {
+        width: 100%;
+        padding: 10px;
+
+        color: #828282;
+        background: #f1f1f1;
+    }
+
+    .grid-list+.grid-controls
+    {
+    	margin-top:10px;
+    }
+
+
+    .control-label > .grid-item
+    {
+        margin-top: .35rem;
+
+        &:first-child
+        {
+            margin-top: 0;
+        }
+    }
+
+    .grid-field_type .grid-container .grid-item .grid-item-controls
+    {
+        padding: .35rem .5rem;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // image-field_type
+    ////////////////////////////////////////////////////////////////////////////////
+    .image-field_type .selected
+    {
+        margin-top: 10px;
+        padding-top: 0;
+
+        border-top: 1px solid #eaeaea;
+    }
+}
