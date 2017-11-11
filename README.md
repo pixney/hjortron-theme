@@ -1,10 +1,8 @@
 # Hjortron Theme
-![Hjortron Preview](https://cdn.pbrd.co/images/GTbgbUu.jpg)
+![Hjortron Preview](https://cdn.pbrd.co/images/GTbkT7H.jpg)
+
 ## How to install it
 `composer require "pixney/hjortron-theme":"~1.0"`
-
-
-
 
 ## Roadmap
 
