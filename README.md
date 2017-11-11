@@ -1,3 +1,4 @@
 # Hjortron Theme
 
-The official control panel theme for PyroCMS.
+**How to install it:**
+`composer require "pixney/hjortron-theme":"~1.0"`
