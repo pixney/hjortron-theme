@@ -1,15 +1,24 @@
-#menu 
+#menu
 {
-    left:$sidebar-width;
-    width:$menu-width;
-    top:$sidebar-menu-main-top-spacing;
-    
-    ul 
-   {
-    @include asideLists()
-   }
-   ul>li>ul 
-   {
-   	display:none;
-   }
+    width: 0;
+    top: $sidebar-menu-main-top-spacing;
+
+    @include media-breakpoint-up(lg)
+    {
+        
+
+        left: $sidebar-width;
+
+        width: $menu-width;
+    }
+
+
+    ul
+    {
+        @include asideLists();
+    }
+    ul > li > ul
+    {
+        display: none;
+    }
 }

@@ -1,4 +1,10 @@
 #footer 
 {
-	margin-left:$sidebar-menu-width;
+	
+	@include media-breakpoint-up(lg) {
+	
+	    margin-left:$sidebar-menu-width;
+	
+	}
+	
 }

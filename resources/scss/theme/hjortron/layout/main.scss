@@ -1,5 +1,9 @@
-#main {
-   margin-left:$sidebar-menu-width;
-
-   padding-top:$sidebar-menu-main-top-spacing;
+#main
+{
+	padding-top: $sidebar-menu-main-top-spacing;
+    @include media-breakpoint-up(lg)
+    {
+        margin-left: $sidebar-menu-width;
+        
+    }
 }

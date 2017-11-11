@@ -1,18 +1,20 @@
 .card .card-title
 {
-	text-transform:uppercase;
-	color:#fff;
-	font-weight:600;
+    font-weight: 600;
 
-	small 
-	{
-		color:c5c5c5;
-		text-transform: normal;
-	}
+    text-transform: uppercase;
+
+    color: #fff;
+
+    small
+    {
+        text-transform: none;
+
+        color: #c5c5c5;
+    }
 }
 
 .card .card-header
 {
-	background:#343434;
-
+    background: #343434;
 }

@@ -1,33 +1,42 @@
-#topbar 
+#topbar
 {
-    .topbar-left 
+    ul.nav.navbar-nav.navbar-left
     {
-
+        a 
+        {
+            padding:0;
+            img 
+            {
+                width:30px;
+                height:30px;
+            }
+        }
     }
     .topbar-left,
     .button-menu .button-menu-mobile,
     .search-bar,
-    .nav>li>a,
+    .nav > li > a,
     .logo
     {
         line-height: 50px;
-        height:50px;
+
+        height: 50px;
     }
 
-    .logo svg 
+    .logo svg
     {
-        margin-top:0px;
-        height:30px;
-        width:16px;
+        width: 16px;
+        height: 30px;
+        margin-top: 0;
     }
 
-    .dropdown-menu 
+    .dropdown-menu
     {
-        padding:0 0 1rem;
-        .dropdown-header 
+        padding: 0 0 1rem;
+        .dropdown-header
         {
-            background:#11bef7;
-            color:#fff;
+            color: #fff;
+            background: #11bef7;
         }
     }
 }
