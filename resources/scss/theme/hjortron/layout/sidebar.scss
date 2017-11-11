@@ -1,0 +1,15 @@
+#sidebar,
+#sidebar.open {
+    width: $sidebar-width !important;
+    top:$sidebar-menu-main-top-spacing;
+    
+    ul 
+    {
+        @include asideLists();
+    }
+    ul>li.active a 
+    {
+    	margin-left: -3px;
+    }
+}
+

@@ -1,0 +1,15 @@
+#menu 
+{
+    left:$sidebar-width;
+    width:$menu-width;
+    top:$sidebar-menu-main-top-spacing;
+    
+    ul 
+   {
+    @include asideLists()
+   }
+   ul>li>ul 
+   {
+   	display:none;
+   }
+}

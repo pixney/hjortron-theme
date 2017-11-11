@@ -1,0 +1,9 @@
+{{ asset_add('scripts.js', 'pixney.theme.hjortron::js/navigation/jquery-sortable.js') }}
+{{ asset_add('scripts.js', 'pixney.theme.hjortron::js/navigation/preferences.js') }}
+
+<p>
+    {{ icon('fa fa-arrows') }}
+    {{ trans('pixney.theme.hjortron::preference.navigation.reorder')|raw }}
+
+    <input type="hidden" id="navigation-order" name="navigation" value="{{ field_type.value }}">
+</p>

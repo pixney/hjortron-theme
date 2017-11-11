@@ -1,0 +1,12 @@
+html,
+body {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: bidi-override;
+}
+
+* {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: bidi-override;
+}

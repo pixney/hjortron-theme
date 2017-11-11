@@ -1,0 +1,29 @@
+@mixin asideLinks() {
+	display:flex;
+	line-height: 1;
+	font-size:$font-size-base;
+	margin:0;
+	padding:.5rem;
+	
+
+}
+
+@mixin asideLists() {
+
+	padding:.5rem;
+
+    li 
+    {
+        display:block;
+        
+    }
+    li a {
+        @include asideLinks();
+    }
+
+    li a .title 
+    {
+        display:block;
+    }
+
+}

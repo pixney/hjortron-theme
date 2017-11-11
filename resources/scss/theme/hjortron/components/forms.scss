@@ -1,0 +1,106 @@
+.form {
+
+    .field-group {
+        margin-bottom: .875rem;
+        padding-bottom: .875rem;
+    }
+
+    // .form-group {
+    //     margin-bottom: 0;
+
+    //     &.has-info {
+    //         .c-checkbox,
+    //         .c-radio {
+    //             color: $brand-info;
+    //         }
+    //     }
+
+    //     &.has-danger {
+    //         .c-checkbox,
+    //         .c-radio {
+    //             color: $brand-danger;
+    //         }
+    //     }
+
+    //     &.has-success {
+    //         .c-checkbox,
+    //         .c-radio {
+    //             color: $brand-success;
+    //         }
+    //     }
+
+    //     &.has-warning {
+    //         .c-checkbox,
+    //         .c-radio {
+    //             color: $brand-warning;
+    //         }
+    //     }
+    // }
+
+    // .controls {
+
+    //     .actions {
+    //         display: inline-block;
+    //     }
+
+    //     .buttons {
+    //         float: right;
+    //     }
+
+    //     &.affix {
+    //         bottom: 0;
+    //         position: fixed;
+    //         margin-bottom: 0;
+    //         z-index: $zindex-modal - 100;
+    //         border-bottom-left-radius: 0;
+    //         border-bottom-right-radius: 0;
+
+    //         &:before {
+    //             top: 0;
+    //             left: 0;
+    //             right: 0;
+    //             height: 1px;
+    //             content: '';
+    //             position: absolute;
+    //             box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.25);
+    //         }
+
+    //         &:after {
+    //             top: 1px;
+    //             left: 0;
+    //             right: 0;
+    //             height: 1px;
+    //             content: '';
+    //             position: absolute;
+    //             background: #ffffff;
+    //         }
+    //     }
+    // }
+
+    // label {
+
+    //     &.control-label {
+    //         font-weight: bold;
+    //     }
+
+    //     .required {
+    //         color: $brand-danger;
+    //     }
+    //     margin-bottom:0;
+    // }
+
+    label + p 
+    {
+    	margin-bottom:.4rem;
+        font-size: 0.8rem;
+    }
+    .text-warning
+    {
+        font-size:.8rem;
+        font-style:italic;
+    }
+}
+
+.form-control {
+   border-radius: 0;
+}

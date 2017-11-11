@@ -1,0 +1,37 @@
+#sidebar {
+    right:0;
+    direction: rtl;
+    > ul {
+
+        > li {
+            > a {
+                .title {
+                    margin-left: 0;
+                    margin-right: 8px;
+                }
+            }
+
+
+            &.active {
+                border-left: none;
+                border-right: 3px solid #ffffff;
+
+                a {
+                    margin-left: 0;
+                    margin-right: -3px;
+                }
+            }
+        }
+    }
+}
+
+body.expand {
+    #sidebar {
+        a {
+            text-align: right;
+            padding-left: 0px;
+            padding-right: 20px;
+        }
+    }
+}
+

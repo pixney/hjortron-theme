@@ -1,0 +1,31 @@
+{
+    "name": "pixney/hjortron-theme",
+    "type": "streams-addon",
+    "description": "A Pyro LDP Administration theme created by Pixney.",
+    "keywords": [
+        "cms",
+        "addon",
+        "theme",
+        "pyrocms",
+        "laravel",
+        "pixney"
+    ],
+    "homepage": "https://pixney.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pixney AB",
+            "email": "william@pixney.com",
+            "homepage": "https://pixney.com/",
+            "role": "Owner"
+        }
+    ],
+    "support": {
+        "email": "hello@pixney.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pixney\\HjortronTheme\\": "src/"
+        }
+    }
+}

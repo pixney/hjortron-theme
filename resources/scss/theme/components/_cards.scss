@@ -1,0 +1,38 @@
+.card {
+    position: relative;
+    margin-bottom: $card-spacer-y*2;
+    @include shadow();
+
+    &.card-container {
+        box-shadow: none;
+        background: transparent;
+    }
+
+    &.card-flex {
+        display: flex;
+
+        .card-block {
+            width: 100%;
+        }
+    }
+
+    .card-header {
+        background-color: #fafafa;
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    .card-title {
+        margin: 0;
+        color: darken($gray-light, 15%);
+
+        small {
+            color: $gray-light;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .card-block {
+        padding: .5em;
+    }
+}

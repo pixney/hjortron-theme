@@ -1,0 +1,7 @@
+.alert {
+    @include shadow();
+
+    p {
+        margin-bottom: 0;
+    }
+}

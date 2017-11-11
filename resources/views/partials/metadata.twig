@@ -1,0 +1,33 @@
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>{{ trans('pixney.theme.hjortron::control_panel.title') }}
+    &#8250; {{ trans(template.breadcrumbs.all()|keys|last)|raw }}</title>
+
+<!-- Favicons -->
+{{ favicons("pixney.theme.hjortron::img/favicon.png") }}
+
+{#{{ asset_add("theme.css", "pixney.theme.hjortron::scss/flat-ui/flat-ui.scss") }}#}
+{{ asset_add("theme.css", "pixney.theme.hjortron::scss/fonts/fonts.scss", ["parse"]) }}
+{#{ asset_add("theme.css", "pixney.theme.hjortron::scss/bootstrap/bootstrap.scss") }#}
+{{ asset_add("build.css", "pixney.theme.hjortron::scss/theme/theme.scss") }}
+
+{{ asset_add("theme.js", "pixney.theme.hjortron::js/vendor/*") }}
+{{ asset_add("theme.js", "pixney.theme.hjortron::js/libraries/tether.min.js") }}
+{{ asset_add("theme.js", "pixney.theme.hjortron::js/libraries/*") }}
+{{ asset_add("theme.js", "pixney.theme.hjortron::js/theme/*") }}
+
+{{ asset_style("theme.css") }}
+{{ asset_style("build.css", ["live"]) }}
+
+{% if locale().isRtl() %}
+    {{ asset_add("styles.css", "pixney.theme.hjortron::css/bootstrap-rtl/bootstrap.rtl.css") }}
+    {{ asset_add("styles.css", "pixney.theme.hjortron::scss/theme/rtl.scss") }}
+{% endif %}
+
+{{ constants() }}
+
+{{ asset_script("theme.js") }}
