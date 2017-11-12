@@ -13,6 +13,7 @@ Select it as your admin theme in `settings`
 Clear cache and assets `php artisan asset:clear && php artisan cache:clear`
 
 ## Roadmap
+* Stop using assetics
 
 ## Changelog
 
