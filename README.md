@@ -17,7 +17,7 @@ Clear cache and assets `php artisan asset:clear && php artisan cache:clear`
 ## Changelog
 
 ### 2017-11-12 - Added Layout setting 
-Added a layout setting in `preferences->themes->hjortron theme->preferences` where you are able to choose between three different layout modes. You are now able to choose on a per user level what font-size and spacing you prefer. This setting means more time has to be spent to perfect everything. Would appreciate any issues files when problems are discovered.
+Added a preference setting in `preferences->themes->hjortron theme->preferences` where you are able to choose between three different layout modes. On a per user level choose what layout mode suits you the best.
 
 ### 2017-11-11 First release 
 * Styling improvements for files field type
