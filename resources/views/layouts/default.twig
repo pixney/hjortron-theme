@@ -6,7 +6,8 @@
     {% include "theme::partials/metadata" %}
 </head>
 
-<body class="variant-{{ random(8) }}{{ locale().isRtl() ? ' rtl' }}" data-variants="8">
+<body 
+class="variant-{{ random(8) }} {{ locale().isRtl() ? ' rtl' }} layout--{{ preference_value('pixney.theme.hjortron::layout') ? preference_value('pixney.theme.hjortron::layout'):'normal' }}" data-variants="8">
 
 {#{% include "theme::partials/push" %}#}
 {#{% include "theme::partials/brand" %}#}

@@ -1,9 +1,20 @@
 <?php
 
 return [
-    'sidebar_hover' => 'anomaly.field_type.boolean',
     'navigation'    => [
         'type'       => 'anomaly.field_type.text',
         'input_view' => 'pixney.theme.hjortron::admin/navigation/preferences',
+    ],
+    "layout"        => [
+        "type"   => "anomaly.field_type.select",
+        "config" => [
+            "options"       => [
+                'compact' => 'Compact',
+                'normal'  => 'Normal',
+                'airy'  => 'Airy',
+            ],
+            "default_value" => "normal",
+            "mode"          => "radio",
+        ],
     ],
 ];
