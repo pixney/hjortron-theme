@@ -1,0 +1,22 @@
+
+.files-field_type table tr td,
+.files-field_type .selected table tr td
+{
+	padding:5px !important;
+}
+.files-field_type .selected table tr td:first-of-type
+{
+	padding-left:10px !important;
+}
+.files-field_type .selected table tr td:last-of-type
+{
+	padding-right: 10px !important;
+}
+.files-field_type .selected table tr td.buttons
+{
+	a 
+	{
+		padding: .25rem .4rem;
+		font-size: .7rem;
+	}
+}
