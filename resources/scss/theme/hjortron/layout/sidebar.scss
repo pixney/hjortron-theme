@@ -1,12 +1,15 @@
 #sidebar,
 #sidebar.open
 {
-    width: 0;
     top: $sidebar-menu-main-top-spacing;
+
+    width: 0;
 
     @include media-breakpoint-up(lg)
     {
-        
+        @include Trans();
+
+        left: 0;
 
         width: $sidebar-width !important;
     }
@@ -20,5 +23,13 @@
     ul > li.active a
     {
         margin-left: -3px;
+    }
+}
+
+body.expand #sidebar.open
+{
+    @include media-breakpoint-up(lg)
+    {
+        left: -$sidebar-width !important;
     }
 }

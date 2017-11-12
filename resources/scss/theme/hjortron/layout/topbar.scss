@@ -1,5 +1,26 @@
 #topbar
 {
+    .topbar-left
+    {
+
+        @include media-breakpoint-up(lg) {
+
+            width:$sidebar-width !important;
+
+        }
+
+        .logo span 
+        {
+
+            @include media-breakpoint-up(lg) {
+            
+                display:inline-block;
+            
+            }
+            
+        }
+        
+    }
     ul.nav.navbar-nav.navbar-left
     {
         a 
@@ -40,3 +61,22 @@
         }
     }
 }
+
+body.expand #topbar
+{
+    .topbar-left
+    {
+
+        @include media-breakpoint-up(md) {
+
+            width:$sidebar-width !important;
+            .logo span 
+            {
+                margin-left: 0px;
+            }
+        }
+        
+    }
+}
+
+

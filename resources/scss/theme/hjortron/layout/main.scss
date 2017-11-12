@@ -1,9 +1,19 @@
 #main
 {
-	padding-top: $sidebar-menu-main-top-spacing;
+    padding-top: $sidebar-menu-main-top-spacing;
+
     @include media-breakpoint-up(lg)
     {
+        @include Trans();
+
         margin-left: $sidebar-menu-width;
-        
+    }
+}
+
+body.expand #main
+{
+    @include media-breakpoint-up(lg)
+    {
+        margin-left: $menu-width !important;
     }
 }

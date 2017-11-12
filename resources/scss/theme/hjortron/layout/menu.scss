@@ -1,11 +1,12 @@
 #menu
 {
-    width: 0;
     top: $sidebar-menu-main-top-spacing;
+
+    width: 0;
 
     @include media-breakpoint-up(lg)
     {
-        
+        @include Trans();
 
         left: $sidebar-width;
 
@@ -20,5 +21,13 @@
     ul > li > ul
     {
         display: none;
+    }
+}
+
+body.expand #menu
+{
+    @include media-breakpoint-up(lg)
+    {
+        left: 0 !important;
     }
 }

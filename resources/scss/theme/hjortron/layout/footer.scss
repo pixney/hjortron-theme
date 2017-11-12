@@ -1,10 +1,17 @@
-#footer 
+#footer
 {
-	
-	@include media-breakpoint-up(lg) {
-	
-	    margin-left:$sidebar-menu-width;
-	
-	}
-	
+    @include media-breakpoint-up(lg)
+    {
+        @include Trans();
+
+        margin-left: $sidebar-menu-width;
+    }
+}
+
+body.expand #footer
+{
+    @include media-breakpoint-up(lg)
+    {
+        margin-left: $menu-width;
+    }
 }
