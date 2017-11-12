@@ -1,5 +1,11 @@
 .table 
 {
+	br { display:none;}
+	small,strong 
+	{
+		display:block;
+		line-height: 1.2;
+	}
 	th 
 	{
 		//padding:.35rem;

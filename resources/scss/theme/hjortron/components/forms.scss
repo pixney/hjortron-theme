@@ -5,7 +5,10 @@
         padding-bottom: .875rem;
     }
 
-   
+   label
+   {
+    margin-bottom:0;
+   }
     label + p 
     {
     	margin-bottom:.4rem;    }
