@@ -8,9 +8,11 @@
     }
 }
 
-body.expand #footer
+
+body.expand #sidebar.open + #menu + #main + #footer,
+body #sidebar.open + #menu + #main + #footer
 {
-    @include media-breakpoint-up(lg)
+	 @include media-breakpoint-up(lg)
     {
         margin-left: $menu-width;
     }

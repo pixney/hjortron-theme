@@ -10,7 +10,9 @@
     }
 }
 
-body.expand #main
+
+body.expand #sidebar.open + #menu + #main,
+body #sidebar.open + #menu + #main,
 {
     @include media-breakpoint-up(lg)
     {

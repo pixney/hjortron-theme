@@ -55,8 +55,8 @@ body.layout--compact
     }
 }
 
-
-body.expand #sidebar.open
+body.expand #sidebar.open,
+body #sidebar.open
 {
     @include media-breakpoint-up(lg)
     {
