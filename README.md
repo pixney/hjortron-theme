@@ -17,6 +17,8 @@ Clear cache and assets `php artisan asset:clear && php artisan cache:clear`
 
 ## Changelog
 
+### 2017-11-14 Repeater field type padding issue fix. 
+
 ### 2017-11-12 - Added Layout setting 
 Added a preference setting in `preferences->themes->hjortron theme->preferences` where you are able to choose between three different layout modes. On a per user level choose what layout mode suits you the best.
 
