@@ -28,7 +28,7 @@
 
                 <div class="form-group">
                     {% if setting_value('anomaly.module.users::login') == 'username' %}
-                        {{ form.fields.username.setPlaceholder(form.fields.username.label).input_name|raw }}
+                        {{ form.fields.username.setPlaceholder(form.fields.username.label).input|raw }}
                     {% else %}
                         {{ form.fields.email.setPlaceholder(form.fields.email.label).input|raw }}
                     {% endif %}
