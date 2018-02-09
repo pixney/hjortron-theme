@@ -1,14 +1,45 @@
-$(function () {
+(function (window, document) {
 
-    // Initialize confirm buttons.
-    $('[data-toggle="confirm"]').click(function (e) {
+    const toggles = Array.from(
+        document.querySelectorAll('[data-toggle="confirm"]')
+    );
 
-        e.preventDefault();
+    toggles.forEach(function (toggle) {
 
-        bootbox.confirm($(this).data('message'), function (result) {
-            if (result === true) {
-                $(e.target).unbind('click')[0].click();
-            }
-        });
+        let handler = function (event) {
+
+            event.preventDefault();
+
+            swal({
+                title: event.target.dataset.title || null,
+                text: event.target.dataset.message || null,
+                icon: event.target.dataset.icon || null,
+                buttons: {
+                    cancel: {
+                        visible: true,
+                        text: event.target.dataset.cancel_text || 'Cancel'
+                    },
+                    confirm: {
+                        closeModal: event.target.dataset.close == undefined ? false : (event.target.dataset.close == 'true'),
+                        text: event.target.dataset.confirm_text || 'OK'
+                    },
+                }
+            }).then((value) => {
+                if (value === true) {
+
+                    toggle.removeEventListener('click', handler);
+
+                    /**
+                     * Simulate a native click and let
+                     * the default/intended action happen.
+                     */
+                    const click = document.createEvent('MouseEvents');
+                    click.initEvent('click', true, false);
+                    event.target.dispatchEvent(click);
+                }
+            });
+        };
+
+        toggle.addEventListener('click', handler);
     });
-});
+})(window, document);

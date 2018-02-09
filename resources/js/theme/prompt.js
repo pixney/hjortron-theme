@@ -1,30 +1,67 @@
-$(function () {
+(function (window, document) {
 
-    // Initialize prompt buttons.
-    $('[data-toggle="prompt"]').click(function (e) {
+    const toggles = Array.from(
+        document.querySelectorAll('[data-toggle="prompt"]')
+    );
 
-        e.preventDefault();
+    toggles.forEach(function (toggle) {
 
-        var match = $(e.target).data('match') || 'yes';
+        let handler = function (event) {
 
-        bootbox.prompt($(this).data('message').replace(':match:', match), function (result) {
+            event.preventDefault();
 
-            if (result === match) {
-                $(e.target).unbind('click')[0].click();
-            } else if (typeof result == 'string') {
-                $('.bootbox.modal')
-                    .find('.modal-dialog')
-                    .addClass('animated shake');
+            let match = event.target.dataset.match;
 
-                setTimeout(function () {
-                    $('.bootbox.modal')
-                        .find('.modal-dialog')
-                        .removeClass('shake')
-                        .removeClass('animated')
-                }, 1000);
+            let config = {
+                title: event.target.dataset.title || null,
+                text: event.target.dataset.message.replace(':match:', match),
+                icon: event.target.dataset.icon || null,
+                content: "input",
+                buttons: {
+                    cancel: {
+                        visible: true,
+                        text: event.target.dataset.cancel_text || 'Cancel'
+                    },
+                    confirm: {
+                        closeModal: event.target.dataset.close == undefined ? false : (event.target.dataset.close == 'true'),
+                        text: event.target.dataset.confirm_text || 'Yes'
+                    },
+                }
+            };
 
-                return false;
-            }
-        });
+            let callback = function (value) {
+
+                if (value === null) {
+
+                    swal.close();
+
+                    return false;
+                }
+
+                if (value === match) {
+
+                    document.querySelector('.swal-content__input').classList.add('swal-content__input-success');
+
+                    toggle.removeEventListener('click', handler);
+
+                    /**
+                     * Simulate a native click and let
+                     * the default/intended action happen.
+                     */
+                    const click = document.createEvent('MouseEvents');
+                    click.initEvent('click', true, false);
+                    event.target.dispatchEvent(click);
+                } else {
+
+                    swal(config).then(callback);
+
+                    document.querySelector('.swal-content__input').classList.add('swal-content__input-error');
+                }
+            };
+
+            swal(config).then(callback);
+        };
+
+        toggle.addEventListener('click', handler);
     });
-});
+})(window, document);

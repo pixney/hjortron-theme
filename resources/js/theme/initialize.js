@@ -144,6 +144,6 @@ $(document).on('ready', function () {
 
         setTimeout(function () {
             $window.trigger('resize');
-        }, 20);
+        }, 50);
     }
 });
