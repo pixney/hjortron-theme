@@ -15,7 +15,7 @@ $(function () {
             // Close all modals.
             $('.modal').modal('hide');
 
-            bootbox.alert(errors[xhr.status]);
+            swal("Oops", errors[xhr.status], "warning");
 
             if (xhr.status === 401) {
                 // If we're in the admin redirect to admin login.
