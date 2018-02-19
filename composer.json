@@ -27,5 +27,8 @@
         "psr-4": {
             "Pixney\\HjortronTheme\\": "src/"
         }
-    }
+    },
+    "require": {
+        "anomaly/streams-platform": "^1.3"
+    },
 }
