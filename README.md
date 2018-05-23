@@ -4,6 +4,11 @@
 ## How to install it
 
 ### Step 1 
+
+#### Streams v1.4
+`composer require "pixney/hjortron-theme":"~2.0"`
+
+#### Streams v1.3
 `composer require "pixney/hjortron-theme":"~1.0"`
 
 ### Step 2
