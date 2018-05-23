@@ -6,7 +6,7 @@
 ### Step 1 
 
 #### Streams v1.4
-`composer require "pixney/hjortron-theme":"~2.0"`
+`composer require "pixney/hjortron-theme":"~1.4"`
 
 #### Streams v1.3
 `composer require "pixney/hjortron-theme":"~1.0"`
