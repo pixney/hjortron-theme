@@ -1,7 +1,5 @@
-// Bootstrap 
-@import "../bootstrap/bootstrap";
+// Bootstrap mixins
 @import "../bootstrap/mixins";
-
 
 // Utilities
 @import "_mixins";
@@ -19,9 +17,9 @@
 @import "components/modals.rtl";
 @import "components/forms.rtl";
 @import "components/trees.rtl";
-//@import "components/buttons.rtl";
-//@import "components/tags.rtl";
+@import "components/tags.rtl";
 @import "components/grid.rtl";
+@import "components/swal.rtl";
 
 // Pages
 @import "pages/login.rtl";

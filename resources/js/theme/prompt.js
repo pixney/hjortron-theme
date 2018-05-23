@@ -13,9 +13,11 @@
             let match = event.target.dataset.match;
 
             let config = {
-                title: event.target.dataset.title || null,
                 text: event.target.dataset.message.replace(':match:', match),
+                title: event.target.dataset.title || null,
                 icon: event.target.dataset.icon || null,
+                closeOnEsc: event.target.dataset.esc == undefined ? false : (event.target.dataset.esc == 'true'),
+                closeOnClickOutside: event.target.dataset.outside == undefined ? false : (event.target.dataset.outside == 'true'),
                 content: "input",
                 buttons: {
                     cancel: {

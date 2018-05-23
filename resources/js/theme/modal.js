@@ -1,7 +1,6 @@
 var initModal = function () {
 
-    var modal = $('.modal:not([data-initialized])');
-    var remote = $('.modal.remote:not([data-initialized])');
+    var modal = $('.modal.remote:not([data-initialized])');
 
     var loading = '<div class="modal-loading"><div class="active loader large"></div></div>';
 
@@ -11,7 +10,7 @@ var initModal = function () {
     });
 
     // Clear remote modals when closed.
-    remote.on('hidden.bs.modal', function () {
+    modal.on('hidden.bs.modal', function () {
 
         $(this).removeData('bs.modal');
 
@@ -19,7 +18,7 @@ var initModal = function () {
     });
 
     // Show loader for remote modals.
-    remote.on('show.bs.modal', function () {
+    modal.on('show.bs.modal', function () {
         $(this).find('.modal-content').html(loading);
     });
 
@@ -59,7 +58,6 @@ var initModal = function () {
 
     // Mark as initialized.
     modal.attr('data-initialized', '');
-    remote.attr('data-initialized', '');
 };
 
 $(document).ready(function () {
@@ -68,4 +66,12 @@ $(document).ready(function () {
 
 $(document).ajaxComplete(function () {
     initModal();
+});
+
+$(document).on('show.bs.modal', '.modal', function () {
+    var zIndex = 1040 + (10 * $('.modal:visible').length);
+    $(this).css('z-index', zIndex);
+    setTimeout(function() {
+        $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+    }, 0);
 });

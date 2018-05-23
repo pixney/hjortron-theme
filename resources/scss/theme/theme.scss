@@ -12,11 +12,14 @@
 // Layout
 @import "layout/main";
 @import "layout/menu";
+@import "layout/frame";
 @import "layout/footer";
 @import "layout/topbar";
 @import "layout/search";
 @import "layout/buttons";
 @import "layout/sidebar";
+@import "layout/progress";
+
 
 // Components
 @import "components/swal";
@@ -30,7 +33,9 @@
 @import "components/modals";
 @import "components/loader";
 @import "components/buttons";
+@import "components/choices";
 @import "components/variants";
+@import "components/sortable";
 @import "components/dropdowns";
 @import "components/scrollbar";
 @import "components/utilities";

@@ -10,14 +10,41 @@
 <!-- Favicons -->
 {{ favicons("pixney.theme.hjortron::img/favicon.png") }}
 
-{#{{ asset_add("theme.css", "pixney.theme.hjortron::scss/flat-ui/flat-ui.scss") }}#}
+
 {{ asset_add("theme.css", "pixney.theme.hjortron::scss/fonts/fonts.scss", ["parse"]) }}
-{#{ asset_add("theme.css", "pixney.theme.hjortron::scss/bootstrap/bootstrap.scss") }#}
-{{ asset_add("build.css", "pixney.theme.hjortron::scss/theme/theme.scss") }}
+{#{ asset_add("build.css", "pixney.theme.hjortron::scss/theme/theme.scss") }#}
+
+{{ asset_add(
+    "build.css",
+    "pixney.theme.hjortron::scss/theme/theme.scss",
+    [
+        "required",
+        "as:t4t5/sweetalert.css",
+        "as:jshjohnson/Choices.css",
+        "as:rstacruz/nprogress.css",
+    ]
+) }}
 
 {{ asset_add("theme.js", "pixney.theme.hjortron::js/vendor/*") }}
 {{ asset_add("theme.js", "pixney.theme.hjortron::js/libraries/tether.min.js") }}
-{{ asset_add("theme.js", "pixney.theme.hjortron::js/libraries/*") }}
+
+{{ asset_add(
+    "theme.js",
+    "pyrocms.theme.accelerant::js/libraries/*",
+    [
+        "required",
+        "as:t4t5/sweetalert.js",
+        "as:RubaXa/Sortable.js",
+        "as:jshjohnson/Choices.js",
+        "as:rstacruz/nprogress.js",
+        "as:js-cookie/js-cookie.js",
+        "as:ccampbell/mousetrap.js",
+    ]
+) }}
+
+
+
+
 {# Need to figure out globing to scripts.js - ends up with a /* file #}
 {{ asset_add("scripts.js", "pixney.theme.hjortron::js/theme/ajax.js") }}
 {{ asset_add("scripts.js", "pixney.theme.hjortron::js/theme/confirm.js") }}

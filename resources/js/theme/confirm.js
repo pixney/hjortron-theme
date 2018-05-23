@@ -11,9 +11,11 @@
             event.preventDefault();
 
             swal({
-                title: event.target.dataset.title || null,
                 text: event.target.dataset.message || null,
+                title: event.target.dataset.title || null,
                 icon: event.target.dataset.icon || null,
+                closeOnEsc: event.target.dataset.esc == undefined ? false : (event.target.dataset.esc == 'true'),
+                closeOnClickOutside: event.target.dataset.outside == undefined ? false : (event.target.dataset.outside == 'true'),
                 buttons: {
                     cancel: {
                         visible: true,
