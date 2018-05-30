@@ -1,14 +1,19 @@
 # Hjortron Theme
-![Hjortron Preview](https://cdn.pbrd.co/images/GTbkT7H.jpg)
+![Hjortron Preview](https://image.ibb.co/h6xEQy/hjortron.jpg)
+
+## Hjortron - A theme with less margins and paddings
+We felt the original Accelerant theme is using too much padding and margins so we decided to simply copy that theme and make some adjustments to it. We generally use less margins,paddings and a smaller font size. But we have also included a setting for you to select what kind of spacing you prefer.
+
+To access this settings, simply go to `preferences->themes->hjortron theme->preferences` and you can choose from three different options.
+
+To make sure the styling "comes to life" always run `php artisan asset:clear` afterwards. Do that after installation as well.
 
 ## How to install it
 
-### Step 1 
-
-#### Streams v1.4
+### Streams v1.4
 `composer require "pixney/hjortron-theme":"~1.4"`
 
-#### Streams v1.3
+### Streams v1.3
 `composer require "pixney/hjortron-theme":"~1.0"`
 
 ### Step 2
@@ -16,20 +21,3 @@ Select it as your admin theme in `settings`
 
 ### Step 3
 Clear cache and assets `php artisan asset:clear && php artisan cache:clear`
-
-## Roadmap
-* Stop using assetics
-
-## Changelog
-
-### 2017-11-14 Repeater field type padding issue fix. 
-
-### 2017-11-12 - Added Layout setting 
-Added a preference setting in `preferences->themes->hjortron theme->preferences` where you are able to choose between three different layout modes. On a per user level choose what layout mode suits you the best.
-
-### 2017-11-11 First release 
-* Styling improvements for files field type
-* Change to grid styling
-* Improved responsiveness for Iphone 4
-* Change to menu behavior. All menu items are per default visible, but you are able to hide the menu to the very left by clicking the menu button.
-
