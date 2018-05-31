@@ -5,9 +5,12 @@
 <head>
     {% include "theme::partials/metadata" %}
 </head>
-
+{% set layout = preference_value('pixney.theme.hjortron::layout') ? preference_value('pixney.theme.hjortron::layout'):'normal' %}
+{% set colorScheme = setting_value('pixney.theme.hjortron::color_scheme') ? setting_value('pixney.theme.hjortron::color_scheme'):'dark' %}
 <body 
-class="variant-{{ random(8) }} {{ locale().isRtl() ? ' rtl' }} layout--{{ preference_value('pixney.theme.hjortron::layout') ? preference_value('pixney.theme.hjortron::layout'):'normal' }}" data-variants="8">
+class="
+Layout--{{layout}} 
+ColorScheme--{{colorScheme}}">
 
 {#{% include "theme::partials/push" %}#}
 {#{% include "theme::partials/brand" %}#}
@@ -22,7 +25,7 @@ class="variant-{{ random(8) }} {{ locale().isRtl() ? ' rtl' }} layout--{{ prefer
 
     <main id="main" style="min-height: 1500px;">
 
-        {{ breadcrumb() }}
+        {#{ breadcrumb() }#}
 
         <div class="container-fluid">
             {% include "theme::partials/messages" %}
@@ -33,7 +36,7 @@ class="variant-{{ random(8) }} {{ locale().isRtl() ? ' rtl' }} layout--{{ prefer
 
     </main>
 
-    {% include "theme::partials/footer" %}
+    {# {% include "theme::partials/footer" %} #}
     {% include "theme::partials/modals" %}
 
 </section>

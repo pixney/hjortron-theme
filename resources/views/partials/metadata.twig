@@ -55,7 +55,7 @@
 {{ asset_add("scripts.js", "pixney.theme.hjortron::js/theme/push.js") }}
 {{ asset_add("scripts.js", "pixney.theme.hjortron::js/theme/search.js") }}
 
-{{ asset_style("theme.css") }}
+{{ asset_style("theme.css",["live"]) }}
 {{ asset_style("build.css", ["live"]) }}
 
 {% if locale().isRtl() %}
