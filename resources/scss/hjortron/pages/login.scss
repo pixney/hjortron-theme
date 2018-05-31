@@ -1,0 +1,47 @@
+#login .PixneyLogin
+{
+    display: flex;
+
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    .PixneyLogin__Wrapper
+    {
+        width: 320px;
+        padding: 40px;
+
+        border: 1px solid #ddd;
+        background: #fff;
+    }
+
+    input[type='email']
+    {
+        margin-bottom: 15px;
+    }
+    input[type='password']
+    {
+        margin-bottom: 30px;
+    }
+
+    button
+    {
+        width: 100%;
+        margin: 5px 0 30px;
+        padding: 10px;
+
+        cursor: pointer;
+        background:#fff;
+
+        color: #000;
+        border: 1px solid #000;
+      
+
+        &:hover
+        {
+            color: #333;
+            border: 1px solid #333;
+        }
+    }
+}

@@ -2,15 +2,15 @@
 
 <html>
 
-<head>
-    {% include "theme::partials/metadata" %}
-</head>
+    <head>
+        {% include "theme::partials/metadata" %}
+    </head>
 
-<body id="login" class="variant-{{ random(8) }}" data-variants="8">
+    <body id="login">
 
-{% block content %}{% endblock %}
+        {% block content %}{% endblock %}
 
-{% include "theme::partials/assets" %}
+        {% include "theme::partials/assets" %}
 
-</body>
+    </body>
 </html>

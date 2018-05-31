@@ -1,11 +1,11 @@
-<?php namespace Pixney\HjortronTheme;
+<?php
 
+namespace Pixney\HjortronTheme;
+
+use Illuminate\Pagination\AbstractPaginator;
+use Pixney\HjortronTheme\Listener\ApplySorting;
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
 use Anomaly\Streams\Platform\Ui\ControlPanel\Component\Navigation\Event\SortNavigation;
-use Illuminate\Pagination\AbstractPaginator;
-use Pixney\HjortronTheme\Http\Controller\Admin\PreferencesController;
-use Pixney\HjortronTheme\Http\Controller\Admin\SettingsController;
-use Pixney\HjortronTheme\Listener\ApplySorting;
 
 /**
  * Class HjortronThemeServiceProvider
@@ -16,6 +16,10 @@ use Pixney\HjortronTheme\Listener\ApplySorting;
  */
 class HjortronThemeServiceProvider extends AddonServiceProvider
 {
+    // protected $overrides = [
+    //     'streams::errors/404' => 'theme::errors/404',
+    //     'streams::errors/500' => 'theme::errors/500',
+    // ];
 
     /**
      * The addon listeners.
