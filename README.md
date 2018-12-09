@@ -1,3 +1,6 @@
+# Deprecated
+The features has now been introduced to the accelerant default admin theme.
+
 # Hjortron Theme
 ![Hjortron Preview](https://image.ibb.co/h6xEQy/hjortron.jpg)
 
